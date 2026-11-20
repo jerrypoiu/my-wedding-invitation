@@ -1,7 +1,27 @@
 const revealItems = document.querySelectorAll('.reveal');
+const hero = document.querySelector('.hero');
+let heroViewportWidth;
+
+function lockMobileHeroHeight() {
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    hero.style.height = `${window.innerHeight}px`;
+    heroViewportWidth = window.innerWidth;
+  } else {
+    hero.style.height = '';
+    heroViewportWidth = undefined;
+  }
+}
+
+window.addEventListener('resize', () => {
+  // Mobile browser chrome changes height while scrolling; only react to width changes.
+  if (heroViewportWidth !== undefined && window.innerWidth !== heroViewportWidth) {
+    lockMobileHeroHeight();
+  }
+});
 
 document.querySelectorAll('.cover-button').forEach((button) => {
   button.addEventListener('click', () => {
+    lockMobileHeroHeight();
     document.querySelector('#invitation-cover').hidden = true;
     document.querySelector('#invitation').hidden = false;
     const backgroundMusic = document.querySelector('#background-music');
