@@ -4,6 +4,7 @@ document.querySelectorAll('.cover-button').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelector('#invitation-cover').hidden = true;
     document.querySelector('#invitation').hidden = false;
+    document.querySelector('#background-music').play().catch(() => {});
     window.scrollTo(0, 0);
   });
 });
