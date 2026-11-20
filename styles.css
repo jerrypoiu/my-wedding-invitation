@@ -465,7 +465,11 @@ img {
     height: 100vh;
     height: 100svh;
     min-height: 0;
-    background-image: url("Image/mobile/01_DSC00441_1_web.jpg");
+    background-image: url("Image/mobile/hero-shaded.jpg");
+  }
+
+  .hero-overlay {
+    display: none;
   }
 
   .reveal {
