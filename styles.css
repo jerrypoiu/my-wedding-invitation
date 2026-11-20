@@ -38,6 +38,74 @@ img {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.invitation-cover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6ab7f5;
+}
+
+.invitation-cover::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -30px;
+  background: url("Image/Title2.png") center / cover no-repeat;
+  filter: blur(20px) brightness(0.85);
+}
+
+.invitation-cover[hidden],
+.page-shell[hidden] {
+  display: none;
+}
+
+.invitation-cover-image {
+  position: relative;
+  width: min(100%, 460px);
+}
+
+.invitation-cover-image img {
+  height: auto;
+}
+
+.cover-button {
+  position: absolute;
+  top: 74.1%;
+  height: 6%;
+  width: 44%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .cover-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.cover-button:active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cover-button:focus-visible {
+  outline: 3px solid #402b35;
+  outline-offset: 3px;
+}
+
+.cover-button-yes {
+  left: 5%;
+}
+
+.cover-button-sure {
+  left: 51%;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -142,7 +210,7 @@ img {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
   align-items: center;
-  padding: 0 1.5rem 8rem;
+  padding: 8rem 1.5rem;
 }
 
 .story-image {
@@ -156,14 +224,17 @@ img {
   padding: 1rem 0;
 }
 
-.story-copy h3 {
-  font-size: clamp(2.3rem, 3vw, 3.3rem);
+.story-copy h3,
+.section-header h2 {
+  font-size: clamp(2rem, 2.7vw, 3rem);
 }
 
 .story-copy p {
   color: var(--muted);
   line-height: 1.9;
-  font-size: 1rem;
+  font-size: 1.0rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .section-header {
@@ -366,7 +437,7 @@ img {
 
   .photo-story {
     grid-template-columns: 1fr;
-    padding: 0 1.1rem 5rem;
+    padding: 5rem 1.1rem;
     gap: 1.5rem;
   }
 

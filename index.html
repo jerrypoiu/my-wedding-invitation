@@ -17,7 +17,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <div class="invitation-cover" id="invitation-cover">
+      <div class="invitation-cover-image">
+        <img src="Image/Title2.png" alt="업적 달성! 평생의 짝꿍. 결혼식에 초대되셨습니다. 초대를 수락하시겠습니까?" />
+        <button class="cover-button cover-button-yes" type="button" aria-label="YES! 초대 수락"></button>
+        <button class="cover-button cover-button-sure" type="button" aria-label="당연하지! 초대 수락"></button>
+      </div>
+    </div>
+    <div class="page-shell" id="invitation" hidden>
       <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
@@ -33,34 +40,32 @@
       </header>
 
       <main>
-        <section class="intro section reveal">
-          <p class="section-tag">Invitation</p>
-          <h2>소중한 사람들 앞에서</h2>
-          <p class="lead">
-            두 사람의 마음이 한 자리에 모여<br />
-            새로운 시작을 함께하려 합니다.<br />
-            따뜻한 마음으로 축복해 주시면 감사하겠습니다.
-          </p>
-        </section>
-
         <section class="photo-story reveal">
           <div class="story-image story-large">
             <img src="Image/02_DSC00445_1_web.jpg" alt="신랑신부 사진" />
           </div>
           <div class="story-copy">
-            <p class="section-tag">Our Story</p>
-            <h3>우리가 만난 시간</h3>
+            <p class="section-tag"></p>
+            <h3>초대의 글</h3>
             <p>
-              작은 일상 속에서 시작된 인연이<br />
-              이제 하나의 가정을 이루려 합니다.<br />
-              서로를 사랑하며 평생을 함께 걸어가고자 합니다.
+              안녕하세요. 조형준, 조예진입니다.
+            </p>
+            <p>
+              매년 이날을 떠올리며</br>
+              오래도록 소중히 기념할</br>
+              저희 두 사람의 특별한 날</br>
+              그 기억 속에 여러분도 함께 계셨으면 하는 마음으로 초대의 글을 전합니다.
+            </p>
+            <p>
+              귀한 걸음으로 함께해 주신다면
+              더없이 기쁘고 감사하겠습니다.
             </p>
           </div>
         </section>
 
         <section class="gallery section reveal">
           <div class="section-header">
-            <p class="section-tag">Gallery</p>
+            <p class="section-tag"></p>
             <h2>우리의 순간</h2>
           </div>
           <div class="gallery-grid">
@@ -76,7 +81,7 @@
 
         <section class="info section reveal">
           <div class="section-header">
-            <p class="section-tag">Wedding Information</p>
+            <p class="section-tag"></p>
             <h2>예식 안내</h2>
           </div>
           <div class="info-grid">
@@ -95,7 +100,7 @@
 
         <section class="map section reveal">
           <div class="section-header">
-            <p class="section-tag">Location</p>
+            <p class="section-tag"></p>
             <h2>오시는 길</h2>
           </div>
 
@@ -135,7 +140,7 @@
 
         <section class="gift section reveal">
           <div class="section-header">
-            <p class="section-tag">Congratulation</p>
+            <p class="section-tag"></p>
             <h2>마음 전하실 곳</h2>
           </div>
           <div class="gift-grid">
@@ -155,7 +160,7 @@
         </section>
 
         <section class="ending section reveal">
-          <p class="section-tag">Thank You</p>
+          <p class="section-tag"></p>
           <h2>감사합니다</h2>
           <p>
             바쁘신 와중에도 시간을 내어<br />
