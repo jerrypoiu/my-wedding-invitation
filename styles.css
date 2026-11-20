@@ -205,6 +205,39 @@ img {
   color: var(--muted);
 }
 
+.ending-cats {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: clamp(1rem, 4vw, 3rem);
+  margin: 3rem auto 0;
+}
+
+.ending-cats img {
+  width: auto;
+  height: min(40vw, 240px);
+  max-width: 40%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 5px rgba(49, 36, 20, 0.15));
+  transform-origin: center bottom;
+  animation: cat-sway 2.5s ease-in-out infinite;
+}
+
+.ending-cats img + img {
+  animation-delay: -1.25s;
+}
+
+@keyframes cat-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ending-cats img {
+    animation-duration: 3.5s;
+  }
+}
+
 .photo-story {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
