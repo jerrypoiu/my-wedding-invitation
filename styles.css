@@ -465,6 +465,9 @@ img {
 
 @media (max-width: 768px) {
   .hero {
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
     background-image: url("Image/mobile/01_DSC00441_1_web.jpg");
   }
 
