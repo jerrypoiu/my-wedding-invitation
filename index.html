@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="preload" as="image" href="Image/mobile/hero-shaded.jpg" media="(max-width: 768px)" />
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
     <audio id="background-music" src="Audio/background.mp3" preload="auto" autoplay></audio>
@@ -150,17 +150,18 @@
           <div class="gift-grid">
             <article class="gift-card">
               <h3>신랑 측</h3>
-              <p>하나은행</p>
-              <strong>443-910433-96907</strong>
-              <span>조용숭 · 임숙미 의 아들<br />조형준</span>
+              <p class="gift-family">조용숭 · 임숙미의 아들 조형준</p>
+              <div class="account"><strong>조용숭</strong><div class="account-details"><span>하나은행 <span class="account-number">443-910015-09307</span></span><button type="button" class="copy-account" aria-label="조용숭 계좌번호 복사">복사</button></div></div>
+              <div class="account"><strong>임숙미</strong><div class="account-details"><span>하나은행 <span class="account-number">443-910013-45508</span></span><button type="button" class="copy-account" aria-label="임숙미 계좌번호 복사">복사</button></div></div>
             </article>
             <article class="gift-card">
               <h3>신부 측</h3>
-              <p>케이뱅크</p>
-              <strong>100-211482-985</strong>
-              <span>조재호 · 홍동미 의 딸<br />조예진</span>
+              <p class="gift-family">조재호 · 홍동미의 딸 조예진</p>
+              <div class="account"><strong>조재호</strong><div class="account-details"><span>농협 <span class="account-number">351-0378-3397-23</span></span><button type="button" class="copy-account" aria-label="조재호 계좌번호 복사">복사</button></div></div>
+              <div class="account"><strong>홍동미</strong><div class="account-details"><span>농협 <span class="account-number">351-0303-6299-23</span></span><button type="button" class="copy-account" aria-label="홍동미 계좌번호 복사">복사</button></div></div>
             </article>
           </div>
+          <p class="copy-status" role="status" aria-live="polite"></p>
         </section>
 
         <section class="ending section reveal">
@@ -178,6 +179,6 @@
       </main>
     </div>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>

@@ -47,3 +47,16 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => observer.observe(item));
+
+document.querySelectorAll('.copy-account').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const number = button.parentElement.querySelector('.account-number').textContent.trim();
+    const status = document.querySelector('.copy-status');
+    try {
+      await navigator.clipboard.writeText(number);
+      status.textContent = '계좌번호를 복사했습니다.';
+    } catch {
+      status.textContent = '복사하지 못했습니다. 계좌번호를 직접 선택해 복사해 주세요.';
+    }
+  });
+});

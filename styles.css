@@ -433,13 +433,73 @@ img {
 
 .gift-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 760px;
+  gap: 1rem;
+}
+
+.gift-card {
+  padding: 2.2rem 1.25rem;
+  background: var(--paper);
+  border-color: rgba(174, 140, 93, 0.2);
 }
 
 .gift-card h3 {
   margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--gold);
+}
+
+.gift-card .gift-family {
+  margin-bottom: 1.6rem;
+  font-size: 0.85rem;
+}
+
+.account + .account {
+  margin-top: 1.5rem;
+}
+
+.gift-card .account strong {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.account-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.copy-account {
+  border: 0;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  background: #f4efe8;
+  color: #806b54;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.copy-account:hover,
+.copy-account:focus-visible {
+  background: #ebe1d5;
+  color: var(--text);
+}
+
+.copy-status {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.copy-status:empty {
+  display: none;
 }
 
 .signature {
